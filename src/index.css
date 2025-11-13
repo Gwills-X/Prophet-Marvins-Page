@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+/* === EXISTING PROFILE SECTION === */
+.profile {
+	background: linear-gradient(rgba(0, 0, 0, 0.2));
+	color: white;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+}
+
+/* keep your background image logic */
+.profile::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("/src/assets/prophetPicture2.jpg");
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	z-index: -10;
+	background-size: cover;
+	background-position: top center;
+}
+
+/* === SCROLL HEADER EFFECT (unchanged) === */
+.headerChange {
+	background: linear-gradient(rgba(0, 0, 0, 0.6));
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: black;
+	transition: all 0.3s linear 0s;
+}
+
+.dropMenu {
+	transition: all 5s 1s ease-in-out;
+}
+
+/* === HERO RESPONSIVENESS FIX === */
+@media (max-width: 768px) {
+	.profile {
+		background: rgba(0, 0, 0, 0); /* adds slight dark overlay for text */
+		background-blend-mode: darken;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.profile::before {
+		background-position: center center;
+		background-size: cover;
+		filter: brightness(0.8);
+	}
+}
