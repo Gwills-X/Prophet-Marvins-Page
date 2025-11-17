@@ -65,7 +65,7 @@ const Invite = () => {
 					<img
 						src={marvinsImg}
 						alt='Marvins Ogwuche'
-						className='w-[500px] h-[500px] max-md:w-[300px] max-md:h-[300px] rounded-full shadow-lg object-cover'
+						className='w-[500px] h-[500px] max-md:w-[300px] max-md:h-[300px] rounded-full shadow-lg '
 					/>
 				</div>
 			</div>
