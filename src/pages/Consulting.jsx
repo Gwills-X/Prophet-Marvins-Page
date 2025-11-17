@@ -3,6 +3,7 @@ import marvinsImg from "../assets/prophetProfile.jpg"; // replace with the actua
 import FormfacadeEmbed from "@formfacade/embed-react";
 import loadingPic from "../assets/ChatGPT Image Nov 12, 2025, 01_17_28 PM.png";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Consulting = () => {
 	const [loading, setLoading] = React.useState(true);
@@ -13,18 +14,30 @@ const Consulting = () => {
 		navigate("/");
 	}
 	return (
-		<div className='flex flex-col items-center justify-center w-full min-h-screen bg-gray-300 py-16 px-5'>
+		<motion.div
+			initial={{ opacity: 0, scale: 0.2 }}
+			whileInView={{ opacity: 1, scale: 1 }}
+			transition={{ duration: 1 }}
+			className='flex flex-col items-center justify-center w-full min-h-screen bg-gray-300 py-16 px-5'>
 			{/* Intro Section */}
 			<div className='max-w-3xl text-center mb-10'>
-				<h1 className='text-4xl font-bold text-gray-800 mb-4'>
+				<motion.h1
+					initial={{ opacity: 0, y: -100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1.5, delay: 0.5 }}
+					className='text-4xl font-bold text-gray-800 mb-4'>
 					Consult with Marvins
-				</h1>
-				<p className='text-gray-600 text-lg leading-relaxed'>
+				</motion.h1>
+				<motion.p
+					initial={{ opacity: 0, x: 100 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ duration: 1.5, delay: 0.5 }}
+					className='text-gray-600 text-lg leading-relaxed'>
 					With Marvins, every moment counts. His passion for people and
 					prophetic insight helps individuals and organizations align with
 					divine purpose, gain clarity, and move forward with wisdom and
 					strategy.
-				</p>
+				</motion.p>
 			</div>
 
 			{/* Form and Image Section */}
@@ -65,7 +78,7 @@ const Consulting = () => {
 					/>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

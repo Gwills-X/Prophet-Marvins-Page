@@ -1,22 +1,35 @@
 import React from "react";
 import marvinsImg from "../assets/prophetProfile.jpg"; // update the path
 import loadingPic from "../assets/ChatGPT_Image_Nov_12__2025__02_02_09_PM-removebg-preview.png";
+import { motion } from "framer-motion";
 
 const Invite = () => {
 	const [isLoading, setIsLoading] = React.useState(true);
 	return (
-		<div className='flex flex-col items-center justify-center min-h-screen bg-gray-200 py-16 px-5'>
+		<motion.div
+			initial={{ opacity: 0, scaleX: 0.5 }}
+			whileInView={{ opacity: 1, scaleX: 1 }}
+			transition={{ duration: 1.5, delay: 0.5 }}
+			className='flex flex-col items-center justify-center min-h-screen bg-gray-200 py-16 px-5'>
 			{/* Header Section */}
 			<div className='max-w-3xl text-center mb-12'>
-				<h1 className='text-4xl font-bold text-gray-800 mb-4'>
+				<motion.h1
+					initial={{ opacity: 0, x: -200 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ duration: 1.5 }}
+					className='text-4xl font-bold text-gray-800 mb-4'>
 					Invite Marvins Ogwuche
-				</h1>
-				<p className='text-gray-600 text-xl leading-relaxed '>
+				</motion.h1>
+				<motion.p
+					initial={{ opacity: 0, x: 200 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ duration: 1.5, delay: 0.5 }}
+					className='text-gray-600 text-xl leading-relaxed '>
 					Partner with Marvins for your next event, conference, or leadership
 					session. His ministry carries a unique grace for transformation,
 					clarity, and prophetic direction. Fill the form below to submit an
 					official invitation.
-				</p>
+				</motion.p>
 			</div>
 
 			{/* Form and Image */}
@@ -62,7 +75,7 @@ const Invite = () => {
 				Once submitted, our team will review your request and reach out with
 				further details.
 			</p>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -96,7 +96,7 @@ const Header = () => {
 									? "text-green-500 font-bold"
 									: "text-white hover:text-green-500"
 							}>
-							Partner With Us
+							Partner With Me
 						</NavLink>
 					</li>
 				</ul>
@@ -171,7 +171,7 @@ const Header = () => {
 									? "text-green-500 font-bold"
 									: "text-white hover:text-green-500"
 							}>
-							Partner With Us
+							Partner With Me
 						</NavLink>
 					</li>
 				</ul>
